@@ -8,10 +8,9 @@
 
 #Projects button {
   background-color: #5a5b6b00;
-  font-size: 3vw;
   color: #ffffff00;
-  width: 6vw;
-  height: 6vw;
+  width: 6vh;
+  height: 6vh;
 }
 
 #Projects #left {
@@ -31,26 +30,17 @@
 }
 
 video {
-  width: 60vw;
-}
-
-.desktop {
-  display: block;
-  margin: auto;
+  width: 100%;
 }
 
 .desktopItems {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  
-  padding: 0em 1em 0em 5em;
+  grid-template-columns: 1fr;
+  align-items: flex-end;
+  padding: 0em 1em 0em 1em;
 }
 
 .tags li {
-  font-size: 1em;
   display: inline-block;
   width: fit-content;
   padding: 0.5em 1em 0.5em 1em;
@@ -60,20 +50,34 @@ video {
 }
 
 .project {
-  width: 90%;
+  width: fit-content;
   height: fit-content;
+  margin: auto;
   padding: 2em;
+  margin-bottom: 1em;
   background-color: #FFDF78;
-}
-
-.project h2 {
-  font-size: 2em;
-}
-
-.project li {
-  font-size: 1em;
 }
 
 .desktop img {
   max-width: 100%;
+}
+
+@media (min-width: 1000px) {
+  .desktopItems { 
+    grid-template-columns: repeat(2, 1fr); 
+  } 
+  .desktop {
+    display: block;
+    margin: auto;
+  }
+  .desktopItems {
+    padding: 0em 1em 0em 5em;
+  }
+  #Projects button {
+    width: 6vw;
+    height: 6vw;
+  }
+  .project li {
+    font-size: 0.6em !important;
+  }
 }

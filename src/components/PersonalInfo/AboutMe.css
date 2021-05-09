@@ -19,6 +19,9 @@
   .info { 
     grid-template-columns: 1fr 1fr;
   }
+  .pair div {
+    font-size: 0.8em !important;
+  }
 }
 
 .frames img {
@@ -33,19 +36,21 @@
   width: 100%;
   padding: 0.2em;
 
-  font-size: 1.5em;
   border: 0.5em solid black;
   box-sizing:border-box;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  
+  font-size: 1.4em;
 }
 
 
 #me {
   box-sizing:border-box;
-  border: 0.5em solid black;
+  border: 0.7em solid black;
 }
 
 #rotate {

@@ -9,34 +9,42 @@
   cursor: url("./images/cursor.png"), pointer;
 }
 
+html {
+  font-size: calc(1em + 1vw)
+}
+
 h1 {
-  font-size: 3rem;
+  font-size: 1.8em;
   padding-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.4em;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 0.8em;
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
 h4 {
-  padding-top: 1rem;
   font-size: 0.6em;
+  padding-top: 1rem;
 }
 
 p {
-  font-size: 1.3em;
+  font-size: 0.8em;
 }
 
-li {
+li:not(#hobbies #list) {
   padding: 0.2em;
-  font-size: 1.3rem;
+  font-size: 0.8em;
   list-style: none;
+}
+
+a:not(#link, .section, .project) {
+  font-size: 1em;
 }
 
 body::-webkit-scrollbar {

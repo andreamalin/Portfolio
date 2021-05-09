@@ -13,9 +13,8 @@
 }
 
 .Contact {
-  max-width: 40%;
+  max-width: 100%;
 }
-
 
 .final {
   max-width: 100%;
@@ -29,8 +28,14 @@
 
 #link {
   text-decoration: none;
-  font-size: 1.5em;
   color: black;
+  font-size: 2em;
+}
+
+@media (min-width: 1000px) {
+  #link {
+    font-size: 1em !important;
+  }
 }
 
 #link:hover {
