@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  cursor: url("./images/cursor.png"), pointer;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+h4 {
+  padding-top: 1rem;
+  font-size: 0.6em;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+li {
+  padding: 0.2em;
+  font-size: 1.3rem;
+  list-style: none;
+}
+
+body::-webkit-scrollbar {
+  width: 13px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #2f3133;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3472a4; 
+  border-radius: 20px; 
+}

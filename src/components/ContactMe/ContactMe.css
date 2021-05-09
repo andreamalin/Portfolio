@@ -1,0 +1,38 @@
+#ContactMe {
+  padding-top: 5%;
+  width: 100%;
+  background-color: #5D5F7A;
+  font-family: 'Merriweather Sans';
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Contact {
+  max-width: 40%;
+}
+
+
+.final {
+  max-width: 100%;
+  padding: 1em 0em 5em 0em;
+}
+
+#title {
+  padding-top: 2.5em;
+  color: #000000;
+}
+
+#link {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+}
+
+#link:hover {
+  color: #ffffff;
+}

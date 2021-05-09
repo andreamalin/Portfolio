@@ -1,0 +1,141 @@
+.graphs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+@media (min-width: 1000px) {
+  .graphs { 
+    grid-template-columns: repeat(4, 1fr); 
+  }
+  .graph {
+    width: 10vw !important;
+  }
+}
+
+#skills {
+  text-align: center;
+  background-image: url('./coffee\ shop.png');
+  max-width: 100%;
+  background-size: cover;
+  padding: 10% 0 10% 0;
+}
+
+.show80 > .cup::after {
+  animation: graph80 4s ease-in-out forwards;
+}
+
+.show95 > .cup::after {
+  animation: graph95 4s ease-in-out forwards;
+}
+
+.show90 > .cup::after {
+  animation: graph90 4s ease-in-out forwards;
+}
+
+
+.cup {
+  position: relative;
+  outline: 0;
+  width: 100px;
+  height: 150px;
+  background-color: #c5c0b2;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 12% 100%);
+}
+
+.cup::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 200%;
+  width: 200%;
+  background-color: #392008;
+  transform: translateX(-50%);
+  border-radius: 35%;
+}
+
+@keyframes spin {
+ from {
+    top: 100%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    top: -50%;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.top {
+  width: 120px;
+  height: 10px;
+  background-color: #191919;
+}
+
+.top2 {
+  width: 100px;
+  height: 25px;
+  background-color: #191919;
+  clip-path: polygon(7% 0, 93% 0, 100% 100%, 0 99%);
+}
+
+.coffeeCup {
+  display: grid;
+  justify-items: center;
+}
+
+.graph {
+  display: grid;
+  background-color: #ffffff86;
+  width: 20vw;
+  padding: 2em;
+  margin: 1em;
+}
+
+@keyframes graph80 {
+  from {
+    top: 100%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    top: 20%;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes graph90 {
+  from {
+    top: 100%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    top: 10%;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes graph95 {
+  from {
+    top: 100%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    top: 5%;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes graph0 {
+  from {
+    top: 100%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    top: 100%;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.emptyCup > .cup::after {
+  animation: graph0 6s ease-in-out forwards;
+}

@@ -1,0 +1,37 @@
+#hobbies {
+  font-family: 'VT323';
+  display: grid;
+}
+
+@media (min-width: 1000px) {
+  #hobbies { 
+    grid-template-columns: 1fr 2fr;
+  }
+  #list {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.gihbli {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gihbli:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+#list {
+  text-align: center;
+  background-color: #000000;
+  color: white;
+}
+
+#list h1 {
+  font-weight: normal !important;
+}

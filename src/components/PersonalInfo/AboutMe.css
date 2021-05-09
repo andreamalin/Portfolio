@@ -1,0 +1,64 @@
+.aboutMeContainer {
+  background-color: #C4C4B9;
+  background-image: url('./images/wall.png');
+  background-size: cover;
+  font-family: 'Merriweather Sans';
+}
+
+.info {
+  display: grid;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  padding: 5% 10% 10% 10%;
+  font-weight: normal;
+  font-family: 'VT323';
+}
+
+@media (min-width: 1000px) {
+  .info { 
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.frames img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.pair div {
+  aspect-ratio: 1;
+  background-color: #b7cedf;
+
+  width: 100%;
+  padding: 0.2em;
+
+  font-size: 1.5em;
+  border: 0.5em solid black;
+  box-sizing:border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#me {
+  box-sizing:border-box;
+  border: 0.5em solid black;
+}
+
+#rotate {
+  clip-path: polygon(100% 80%, 100% 0, 0 0);
+  background-color: black;
+  height: 130px;
+  width: 100%;
+  margin: 0;
+}
+
+.pair {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 5%;
+}
