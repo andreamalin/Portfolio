@@ -18,7 +18,7 @@ const AboutMe = () => (
             <img src={H} alt="H" />
             <div>
               WHO IS ANDREA AMAYA?
-              Frontend developer interested on data security 🤯
+              Frontend developer interested in data security 🤯
             </div>
           </div>
 
@@ -33,12 +33,13 @@ const AboutMe = () => (
             <div>
               I am a positive and determined person.
               No one will stop me once I have started something.
-              I like trying new things, experimenting with animations and bring people happinnes.
+              I like trying new things, experimenting with animations
+              and bringing happiness to others.
             </div>
           </div>
           <div className="pair">
             <div>
-              I&apos;ve love designing in Photoshop since I was a kid. After that, I discovered the
+              I&apos;ve loved designing in Photoshop since I was a kid. After that, I discovered the
               programming world and I fell in love for the second time.
             </div>
             <img src={E} alt="E" />

@@ -9,8 +9,9 @@
 #Projects button {
   background-color: #5a5b6b00;
   color: #ffffff00;
-  width: 6vh;
-  height: 6vh;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
 }
 
 #Projects #left {

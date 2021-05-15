@@ -1,6 +1,5 @@
 .game { 
-  padding-top: 2em;
-  padding-bottom: 3em;
+  padding: 2em 0 2em 0;
   background-color: black;
 
   display: flex;
@@ -23,12 +22,6 @@
   visibility: hidden;
 }
 
-#controllers {
-  display: block;
-  width: 28vh;
-  visibility: hidden;
-}
-
 #gameView {
   display: flex;
   flex-direction: column;
@@ -39,8 +32,9 @@
 }
 
 .play {
-  background-image: url('./images/background.png');
+  background-image: url('./images/background-mobile.png');
   padding-bottom: 0.9em;
+  width: 778px;
   height: 410px;
 }
 
@@ -93,11 +87,11 @@
   .game h3 {
     visibility: visible;
   }
-  #controllers {
-    visibility: visible;
-  }
   .sprite {
     visibility: visible !important;
+  }
+  .play {
+    background-image: url('./images/background.png');
   }
 }
 

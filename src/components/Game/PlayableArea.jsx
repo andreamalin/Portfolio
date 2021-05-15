@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Sections from '../Sections'
+import useScreen from '../Observer'
 import './Game.css'
 
 import sprite1 from './images/sprite1.png'
@@ -32,10 +33,19 @@ Sprite.propTypes = {
 
 const PlayableArea = ({ actualArea, goHome }) => {
   const playableArea = React.createRef()
+  const observer = useScreen(playableArea, 1)
+  const [oneTime, setOneTime] = useState(0)
 
   const [move, setMove] = useState(0)
   const [actualSprite, setActualSprite] = useState(0)
   const [actualOrientation, setActualOrientation] = useState(1)
+
+  useEffect(() => {
+    if (observer && oneTime === 0) {
+      playableArea.current.focus()
+      setOneTime(1)
+    }
+  })
 
   const handleKeyDown = (event) => {
     if (event.key === 'ArrowLeft') {
@@ -73,12 +83,16 @@ const PlayableArea = ({ actualArea, goHome }) => {
       } else if (move >= 84 && move <= 100) {
         window.location.hash = '#ContactMe'
       }
+
+      setTimeout(() => {
+        setOneTime(0)
+      }, 500)
     }
   }
 
   return (
     <div>
-      <h3>⬇ C l i c k  - t o -  p l a y ⬇</h3>
+      <h3>⬇ Use-your-arrows ⬇</h3>
       <div id="gameView" role="banner" className={actualArea} tabIndex="0" onKeyDown={handleKeyDown} ref={playableArea}>
         <Sections goHome={goHome} />
         <Sprite
