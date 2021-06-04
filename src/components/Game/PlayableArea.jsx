@@ -14,12 +14,12 @@ const sprites = [sprite1, sprite2, sprite3]
 
 const Sprite = ({ actualMove, actualSprite, actualOrientation }) => {
   const moveSprite = {
-    marginLeft: `${actualMove}vh`,
+    marginLeft: `${actualMove}%`,
     transform: `scaleX(${actualOrientation})`,
   }
 
   return (
-    <div className="row">
+    <div className="spriteArea">
       <img className="sprite" src={sprites[actualSprite]} style={moveSprite} alt="player" />
     </div>
   )
@@ -49,8 +49,8 @@ const PlayableArea = ({ actualArea, goHome }) => {
 
   const handleKeyDown = (event) => {
     if (event.key === 'ArrowLeft') {
-      if (move - 2 <= 0) {
-        setMove(108)
+      if (move - 4 <= 0) {
+        setMove(92)
       } else {
         setMove(move - 4)
       }
@@ -60,7 +60,7 @@ const PlayableArea = ({ actualArea, goHome }) => {
     }
 
     if (event.key === 'ArrowRight') {
-      if (move + 2 >= 108) {
+      if (move + 4 > 92) {
         setMove(0)
       } else {
         setMove(move + 4)
@@ -73,17 +73,16 @@ const PlayableArea = ({ actualArea, goHome }) => {
     if (event.key === 'ArrowUp') {
       window.location.hash = ''
       if (goHome) {
-        if (move >= 100 && move <= 112) {
+        if (move >= 80 && move <= 92) {
           window.location.hash = '#Home'
         }
-      } else if (move >= 0 && move <= 8) {
+      } else if (move >= 8 && move <= 16) {
         window.location.hash = '#AboutMe'
-      } else if (move >= 52 && move <= 68) {
+      } else if (move >= 44 && move <= 52) {
         window.location.hash = '#Projects'
-      } else if (move >= 84 && move <= 100) {
+      } else if (move >= 76 && move <= 80) {
         window.location.hash = '#ContactMe'
       }
-
       setTimeout(() => {
         setOneTime(0)
       }, 500)

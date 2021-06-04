@@ -33,37 +33,44 @@
 
 .play {
   background-image: url('./images/background-mobile.png');
-  padding-bottom: 0.9em;
+  padding-bottom: 4%;
   width: 778px;
   height: 410px;
 }
 
 .house1 {
   background-image: url('./images/house1.png');
-  padding-bottom: 0.35em;
+  padding-bottom: 1.1%;
   height: 190px;
 }
 
 .house2 {
   background-image: url('./images/house2.png');
   height: 190px;
-  padding-bottom: 0.35em;
+  padding-bottom: 1.1%;
 }
 
 .house3 {
   background-image: url('./images/house3.png');
   height: 190px;
-  padding-bottom: 0.35em;
+  padding-bottom: 1.1%;
 }
 
 .row {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  padding-bottom: 0.2em;
+  padding-bottom: 0%;
   align-items: center;
   justify-content: center;
   justify-items: center;
+  align-content: flex-end;
+}
+
+.spriteArea {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 50%;
   align-content: flex-end;
 }
 
@@ -75,6 +82,31 @@
   padding-bottom: 0;
   padding-top: 0em;
 }
+
+.sprite {
+  display: block;
+  width: 64px;
+  height: 64px;
+  visibility: hidden;
+  max-width: 64px;
+}
+
+.section {
+  font-family: 'VT323';
+  color: #67A5C8;
+  width: 50%;
+  background-color: black;
+  text-decoration: none;
+  display:inline-block;
+  margin-top: 1em;
+}
+
+.section:hover {
+  background-color: #003d55;
+  color: rgb(191, 219, 255);
+  font-weight: normal;
+}
+
 
 @media (min-width: 1000px) {
   .row { 
@@ -93,27 +125,4 @@
   .play {
     background-image: url('./images/background.png');
   }
-}
-
-.sprite {
-  display: block;
-  width: 9.6vh;
-  visibility: hidden;
-  max-width: 9.6vh;
-}
-
-.section {
-  font-family: 'VT323';
-  color: #67A5C8;
-  width: 50%;
-  background-color: black;
-  text-decoration: none;
-  display:inline-block;
-  margin-top: 1em;
-}
-
-.section:hover {
-  background-color: #003d55;
-  color: rgb(191, 219, 255);
-  font-weight: normal;
 }

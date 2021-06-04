@@ -18,7 +18,8 @@ const AboutMe = () => (
             <img src={H} alt="H" />
             <div>
               WHO IS ANDREA AMAYA?
-              Frontend developer interested in data security 🤯
+              Guatemalan Frontend developer interested in data security 🤯
+              Currently attending the best university in my country (UVG)
             </div>
           </div>
 

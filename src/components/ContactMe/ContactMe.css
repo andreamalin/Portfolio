@@ -21,15 +21,21 @@
   padding: 1em 0em 1em 0em;
 }
 
+.extraSocialMedia {
+  display: flex;
+  flex-direction: row;
+}
+
+.extraSocialMedia a > img {
+  width: 100px;
+  height: 100px;
+  padding: 1em;
+  max-width: 100px;
+}
+
 #title {
   padding-top: 2.5em;
   color: #000000;
-}
-
-#link {
-  text-decoration: none;
-  color: black;
-  font-size: 2em;
 }
 
 @media (min-width: 1000px) {
