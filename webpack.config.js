@@ -1,5 +1,15 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const SitemapPlugin = require('sitemap-webpack-plugin').default
 const path = require('path')
+
+const paths = [
+  {
+    path: '/',
+    lastmod: '2021-06-08',
+    priority: 1,
+    changefreq: 'monthly',
+  },
+]
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.jsx'),
@@ -30,9 +40,10 @@ module.exports = {
   devServer: {
     contentBase: 'dist',
   },
-  plugins: [new HtmlWebpackPlugin({
-    favicon: './src/images/icon.png',
-    templateContent:
+  plugins: [
+    new HtmlWebpackPlugin({
+      favicon: './src/images/icon.png',
+      templateContent:
     `<html>
       <meta name="viewport">
       <meta name="theme-color">
@@ -41,5 +52,13 @@ module.exports = {
         <div id="root"></div>
       </body>
     </html> `,
-  })],
+    }),
+    new SitemapPlugin({
+      base: 'http://andreaamaya.com/',
+      paths,
+      options: {
+        filename: 'map.xml',
+      },
+    }),
+  ],
 }

@@ -35,6 +35,7 @@ const PlayableArea = ({ actualArea, goHome }) => {
   const playableArea = React.createRef()
   const observer = useScreen(playableArea, 1)
   const [oneTime, setOneTime] = useState(0)
+  const [actualPlay, setActualPlay] = useState(0)
 
   const [move, setMove] = useState(0)
   const [actualSprite, setActualSprite] = useState(0)
@@ -44,6 +45,8 @@ const PlayableArea = ({ actualArea, goHome }) => {
     if (observer && oneTime === 0) {
       playableArea.current.focus()
       setOneTime(1)
+    } else if (observer && actualPlay === 0) {
+      playableArea.current.focus()
     }
   })
 
@@ -57,6 +60,7 @@ const PlayableArea = ({ actualArea, goHome }) => {
 
       setActualSprite((actualSprite + 1) % 3)
       setActualOrientation(-1)
+      setActualPlay(actualPlay + 1)
     }
 
     if (event.key === 'ArrowRight') {
@@ -68,6 +72,7 @@ const PlayableArea = ({ actualArea, goHome }) => {
 
       setActualSprite((actualSprite + 1) % 3)
       setActualOrientation(1)
+      setActualPlay(actualPlay + 1)
     }
 
     if (event.key === 'ArrowUp') {
@@ -84,6 +89,7 @@ const PlayableArea = ({ actualArea, goHome }) => {
         window.location.hash = '#ContactMe'
       }
       setTimeout(() => {
+        setActualPlay(0)
         setOneTime(0)
       }, 500)
     }
