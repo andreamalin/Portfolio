@@ -1,6 +1,7 @@
 module.exports = {
   env: {
     browser: true,
+    jest: true,
   },
   extends: [
     'eslint:recommended',
@@ -20,5 +21,13 @@ module.exports = {
   rules: {
     'linebreak-style': 0,
     semi: ['error', 'never'],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
 }

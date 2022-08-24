@@ -1,10 +1,10 @@
 import React from 'react'
-import './ContactMe.css'
-import contactMe from './Contact Me.png'
-import madeWith from './Made.png'
-import linkedin from './linkedin.png'
-import github from './github.png'
-import gmail from './gmail.png'
+import './ContactMe.scss'
+import contactMe from '../../images/contact/Contact Me.png'
+import madeWith from '../../images/contact/Made.png'
+import linkedin from '../../images/contact/linkedin.png'
+import github from '../../images/contact/github.png'
+import gmail from '../../images/contact/gmail.png'
 
 const ContactMe = () => (
   <div id="ContactMe">
