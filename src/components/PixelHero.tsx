@@ -14,19 +14,18 @@ const PixelHero = () => {
       
       <div className="container mx-auto px-4 text-center z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Pixel Avatar */}
-          <div className="flex justify-center">
-            <div className="relative">
+          <div className="items-center justify-center flex flex-col md:flex-row">
+            {/* Pixel Avatar */}
+            <div className="flex justify-center">
               <video src={avatarVideo} autoPlay loop muted className="w-48 h-48 md:w-64 md:h-64 object-cover" />
             </div>
-          </div>
 
-          {/* Hero Text */}
-          <h1 className="text-6xl md:text-8xl font-pixel font-bold mb-6 text-primary">
-            ANDREA
-            <span className="block text-secondary animate-glitch">AMAYA</span>
-          </h1>
-          
+            {/* Hero Text */}
+            <h1 className="text-6xl md:text-8xl font-pixel font-bold mb-6 text-primary">
+              ANDREA
+              <span className="block text-secondary animate-glitch">AMAYA</span>
+            </h1>
+          </div>
           <p className="text-xl md:text-2xl font-pixel mb-8 max-w-2xl mx-auto leading-relaxed" style={{ color: '#bde0fe' }}>
             Building modern web apps with React & TypeScript.
           </p>

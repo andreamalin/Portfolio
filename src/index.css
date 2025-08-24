@@ -9,7 +9,7 @@ All colors MUST be HSL for perfect theming.
 @layer base {
   :root {
     /* Dark retro background with subtle grid pattern */
-    --background: 240 8% 8%;
+    --background: 0 0% 0%;
     --foreground: 120 100% 85%;
 
     /* Card styling with neon borders */
